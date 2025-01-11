@@ -6,7 +6,7 @@
 /*   By: kmatskev <kmatskev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 21:09:14 by kmatskev          #+#    #+#             */
-/*   Updated: 2025/01/11 14:01:57 by kmatskev         ###   ########.fr       */
+/*   Updated: 2025/01/11 16:45:09 by kmatskev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdint.h>
+
+# define BASE_DECIMAL "0123456789"
+# define BASE_HEX_LOWER "0123456789abcdef"
+# define BASE_HEX_UPPER "0123456789ABCDEF"
 
 // ======================== FT_PRINTF FUNCTIONS =======================
 int		ft_printf(const char *format, ...);

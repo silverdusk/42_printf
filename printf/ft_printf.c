@@ -6,7 +6,7 @@
 /*   By: kmatskev <kmatskev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 21:18:05 by kmatskev          #+#    #+#             */
-/*   Updated: 2025/01/11 16:27:27 by kmatskev         ###   ########.fr       */
+/*   Updated: 2025/01/11 16:46:16 by kmatskev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,16 @@ int	ft_format_handler(char modifier, va_list args)
 	else if (modifier == 'p')
 		return (ft_putptr_hex(va_arg(args, void *)));
 	else if (modifier == 'd' || modifier == 'i')
-		return (ft_putnbr_base(va_arg(args, int), "0123456789"));
+		return (ft_putnbr_base(va_arg(args, int), BASE_DECIMAL));
 	else if (modifier == 'u')
 		return (ft_putnbr_base_ull((unsigned long long)
-				va_arg(args, unsigned int), "0123456789"));
+				va_arg(args, unsigned int), BASE_DECIMAL));
 	else if (modifier == 'x')
 		return (ft_putnbr_base_ull((unsigned long long)
-				va_arg(args, unsigned int), "0123456789abcdef"));
+				va_arg(args, unsigned int), BASE_HEX_LOWER));
 	else if (modifier == 'X')
 		return (ft_putnbr_base_ull((unsigned long long)
-				va_arg(args, unsigned int), "0123456789ABCDEF"));
+				va_arg(args, unsigned int), BASE_HEX_UPPER));
 	else if (modifier == '%')
 		return (ft_putchar('%'));
 	ft_putchar('%');

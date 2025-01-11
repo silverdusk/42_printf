@@ -6,7 +6,7 @@
 /*   By: kmatskev <kmatskev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 19:23:42 by kmatskev          #+#    #+#             */
-/*   Updated: 2025/01/11 13:59:46 by kmatskev         ###   ########.fr       */
+/*   Updated: 2025/01/11 16:48:23 by kmatskev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,7 @@ int	ft_putnbr_base(long number, const char *base)
 
 	base_len = ft_strlen(base);
 	if (base_len < 2)
-	{
 		return (0);
-	}
 	len = 0;
 	if (number < 0)
 	{
@@ -53,9 +51,7 @@ int	ft_putnbr_base(long number, const char *base)
 		number = -number;
 	}
 	if (number >= base_len)
-	{
 		len += ft_putnbr_base(number / base_len, base);
-	}
 	len += ft_putchar(base[number % base_len]);
 	return (len);
 }
