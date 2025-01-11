@@ -2,7 +2,7 @@ SRC = ft_printf.c ft_helpers.c ft_putptr_hex.c
 OBJS = $(SRC:.c=.o)
 NAME = libftprintf.a
 
-CC = gcc
+CC = cc
 AR = ar rcs
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
