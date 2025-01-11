@@ -6,7 +6,7 @@
 /*   By: kmatskev <kmatskev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 21:18:05 by kmatskev          #+#    #+#             */
-/*   Updated: 2025/01/11 16:11:00 by kmatskev         ###   ########.fr       */
+/*   Updated: 2025/01/11 16:27:27 by kmatskev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,9 @@ int	ft_format_handler(char modifier, va_list args)
 				va_arg(args, unsigned int), "0123456789ABCDEF"));
 	else if (modifier == '%')
 		return (ft_putchar('%'));
-	return (0);
+	ft_putchar('%');
+	ft_putchar(modifier);
+	return (2);
 }
 
 int	ft_printf(const char *format, ...)

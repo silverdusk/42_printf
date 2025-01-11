@@ -9,8 +9,10 @@ int main(void)
 
     // Basic tests
     printf("========== Simple Tests part 1 ==========\n");
+    printf("\n%d\n", ft_printf("%k"));
+    printf("\n%d\n", printf("%k"));
     printf("Original printf: %d\n", printf("%k"));
-    ft_printf("My ft_printf: %d\n", ft_printf("%k"));
+    printf("My ft_printf: %d\n", ft_printf("%k"));
     ft_printf("Hello %s\n", "world");
     ft_printf("Character: %c\n", 'A');
     ft_printf("Percentage: %%\n");
