@@ -8,6 +8,9 @@ int main(void)
     int pf, fp;
 
     // Basic tests
+    printf("========== Simple Tests part 1 ==========\n");
+    printf("Original printf: %d\n", printf("%k"));
+    ft_printf("My ft_printf: %d\n", ft_printf("%k"));
     ft_printf("Hello %s\n", "world");
     ft_printf("Character: %c\n", 'A');
     ft_printf("Percentage: %%\n");
@@ -19,7 +22,7 @@ int main(void)
     printf("Percentage: %%\n");
 
     // Key Test
-    printf("========== Simple Tests ==========\n");
+    printf("========== Simple Tests part 2 ==========\n");
     printf("Test: c%%de\n");
     pf = printf("printf output: c%%de\n");
     fp = ft_printf("ft_printf output: c%%de\n");

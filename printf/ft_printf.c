@@ -6,7 +6,7 @@
 /*   By: kmatskev <kmatskev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 21:18:05 by kmatskev          #+#    #+#             */
-/*   Updated: 2025/01/11 13:55:54 by kmatskev         ###   ########.fr       */
+/*   Updated: 2025/01/11 16:11:00 by kmatskev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int	ft_format_handler(char modifier, va_list args)
 {
+	if (!modifier)
+		return (0);
 	if (modifier == 'c')
 		return (ft_putchar(va_arg(args, int)));
 	else if (modifier == 's')
@@ -83,6 +85,10 @@ int	main(void)
 	printf("Hello %s\n", "world");
 	printf("Character: %c\n", 'A');
 	printf("Percentage: %%\n");
+
+	printf("===== Unknown specifiers Test =====\n");
+	printf("Original printf: %d\n", printf("%k"));
+	ft_printf("My ft_printf: %d\n", ft_printf("%k"));
 
 	printf("========== Simple Tests ==========\n");
 	printf("Test: c%%de\n");
